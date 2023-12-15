@@ -1,0 +1,15 @@
+
+portfolio.exemple.localhost {
+    root * portfolio
+    file_server
+    encode gzip
+    tls internal
+}
+
+todo.exemple.localhost {
+    tls internal
+    root * todo-list-backend/index.html
+    file_server
+    encode gzip
+    reverse_proxy localhost:4000
+}
